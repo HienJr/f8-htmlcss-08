@@ -132,3 +132,18 @@ function handleActiveMenu() {
         dropdown.onmouseleave = () => init();
     });
 }
+
+// Dark button
+document.addEventListener("DOMContentLoaded", () => {
+    const toggle = document.getElementById("dark-mode-toggle");
+
+    if (toggle) {
+        toggle.addEventListener("change", () => {
+            if (toggle.checked) {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+        });
+    }
+});

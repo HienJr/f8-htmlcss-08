@@ -1496,5 +1496,12 @@ html.dark {
   grid-template-columns: repeat(3, 1fr);
   overflow-y: auto;
 }
+.sub-menu--not-main {
+  position: initial;
+  inset: initial;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  height: calc(min(582px, 100vh - 158px) - 59px);
+}
 
 /*# sourceMappingURL=main.css.map */

@@ -114,9 +114,16 @@
     padding-left: 30px;
 
     display: none;
-    // display: grid;
     gap: 30px;
     grid-template-columns: repeat(3, 1fr);
 
     overflow-y: auto;
+
+    &--not-main {
+        position: initial;
+        inset: initial;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        height: calc(min(582px, 100vh - 158px) - 59px);
+    }
 }

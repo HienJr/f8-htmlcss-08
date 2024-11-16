@@ -1,0 +1,5 @@
+{
+    "prettier.printWidth": 120,
+    "html.format.templating": false,
+    "html.format.wrapLineLength": 120
+}
