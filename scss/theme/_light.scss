@@ -24,4 +24,13 @@ html {
     // Sidebar
     --sidebar-bg: #fff;
     --sidebar-shadow: rgba(23, 28, 40, 0.4);
+
+    //category item
+    --cate-item-bg: #eee;
+    --cate-item-thumb-bg: #fff;
+    --cate-item-title-color: #000;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg: #fff;
+    }
 }
