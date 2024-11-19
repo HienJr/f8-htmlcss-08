@@ -140,28 +140,32 @@ function handleActiveMenu() {
 }
 
 // Dark button
-document.addEventListener("DOMContentLoaded", () => {
-    const toggle = document.getElementById("dark-mode-toggle");
-
-    // Kiểm tra trạng thái dark mode từ LocalStorage
+if (typeof localStorage !== "undefined") {
     const isDarkMode = localStorage.getItem("dark-mode") === "true";
-    if (isDarkMode) {
-        document.documentElement.classList.add("dark");
-        if (toggle) toggle.checked = true; // Đặt trạng thái của checkbox
-    }
 
-    if (toggle) {
-        toggle.addEventListener("change", () => {
-            if (toggle.checked) {
-                document.documentElement.classList.add("dark");
-                localStorage.setItem("dark-mode", "true"); // Lưu trạng thái
-            } else {
-                document.documentElement.classList.remove("dark");
-                localStorage.setItem("dark-mode", "false"); // Lưu trạng thái
-            }
-        });
-    }
-});
+    document.addEventListener("DOMContentLoaded", () => {
+        const toggle = document.getElementById("dark-mode-toggle");
+
+        // Kiểm tra trạng thái dark mode từ LocalStorage
+        const isDarkMode = localStorage.getItem("dark-mode") === "true";
+        if (isDarkMode) {
+            document.documentElement.classList.add("dark");
+            if (toggle) toggle.checked = true; // Đặt trạng thái của checkbox
+        }
+
+        if (toggle) {
+            toggle.addEventListener("change", () => {
+                if (toggle.checked) {
+                    document.documentElement.classList.add("dark");
+                    localStorage.setItem("dark-mode", "true"); // Lưu trạng thái
+                } else {
+                    document.documentElement.classList.remove("dark");
+                    localStorage.setItem("dark-mode", "false"); // Lưu trạng thái
+                }
+            });
+        }
+    });
+}
 
 /**
  * JS toggle
